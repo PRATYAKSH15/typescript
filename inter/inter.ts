@@ -1,33 +1,34 @@
-// simple.ts
+// calculator.ts
 
-// A function with type annotations
+// Addition
 function add(a: number, b: number): number {
   return a + b;
 }
 
-// Subtraction function
+// Subtraction
 function subtract(a: number, b: number): number {
   return a - b;
 }
 
-// Multiplication function
+// Multiplication
 function multiply(a: number, b: number): number {
   return a * b;
 }
 
-// Variables with types
-let x: number = 10;
-let y: number = 20;
+// Division (with check for divide by zero)
+function divide(a: number, b: number): number {
+  if (b === 0) {
+    throw new Error("Cannot divide by zero!");
+  }
+  return a / b;
+}
 
-// Call the functions
-console.log("Sum:", add(x, y));
-console.log("Difference:", subtract(x, y));
-console.log("Product:", multiply(x, y));
+// Example usage
+let x: number = 20;
+let y: number = 10;
 
-// Example of string type
-let message: string = "Hello TypeScript!";
-console.log(message);
-
-// Example of array type
-let numbers: number[] = [1, 2, 3, 4];
-console.log("Numbers:", numbers);
+console.log("Calculator Results:");
+console.log(`${x} + ${y} =`, add(x, y));
+console.log(`${x} - ${y} =`, subtract(x, y));
+console.log(`${x} * ${y} =`, multiply(x, y));
+console.log(`${x} / ${y} =`, divide(x, y));
