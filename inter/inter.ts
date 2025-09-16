@@ -10,6 +10,11 @@ function subtract(a: number, b: number): number {
   return a - b;
 }
 
+// Multiplication function
+function multiply(a: number, b: number): number {
+  return a * b;
+}
+
 // Variables with types
 let x: number = 10;
 let y: number = 20;
@@ -17,6 +22,7 @@ let y: number = 20;
 // Call the functions
 console.log("Sum:", add(x, y));
 console.log("Difference:", subtract(x, y));
+console.log("Product:", multiply(x, y));
 
 // Example of string type
 let message: string = "Hello TypeScript!";
